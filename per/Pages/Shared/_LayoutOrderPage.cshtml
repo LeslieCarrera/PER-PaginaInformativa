@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] Pedro Eloy Rodríguez</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/customLayout.css" />
+    <link rel="stylesheet" href="~/css/OrderForm.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="~/img/favicon.ico" />
+    <!-- Theme CSS - Includes Bootstrap -->
+    <link href="~/css/creative.css" rel="stylesheet">
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '332233594728253');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+             src="https://www.facebook.com/tr?id=332233594728253&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+
+
+</head>
+<body>
+    <header>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+            <div class="container">
+                <a href="/Index">
+                    <img src="~/img/LogoPER.png" class="logo-responsive mr-3" />
+                </a>
+                <a class="navbar-brand js-scroll-trigger" href="/Index">Inicio</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="/PedroEloy">Pedro Eloy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="/Index#Servicios">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="/Clientes">Clientes</a>
+                        </li>
+                        @*<li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="/Implementacion">Implementacion</a>
+            </li>*@
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="/contacto">Contacto</a>
+                        </li>
+                        @*  <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="/blog">Blog</a>
+            </li>*@
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    @RenderBody()
+
+    <!-- Footer -->
+
+    <footer class="bg-light pt-5 pb-0" id="footer">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-8 col-md-4 col-lg-4 mb-4">
+                    <div class="LI-profile-badge text-center" data-version="v1" data-size="medium" data-locale="es_ES" data-type="vertical" data-theme="dark" data-vanity="pedroeloyrdz"><a class="LI-simple-link" href='https://mx.linkedin.com/in/pedroeloyrdz?trk=profile-badge' style="color:white">Pedro Eloy Rodríguez ⭐</a></div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-2 col-lg-1 offset-sm-1 offset-md-1 offset-lg-0 ml-lg-4 ml-xl-5">
+                    <a href="https://www.facebook.com/pedroeloyconsultor/" class="social-icons" target="_blank"><i class="fab fa-facebook-f fa-3x"></i></a>
+                </div>
+                <div class="col-2 col-lg-1 offset-sm-0">
+                    <a href="https://twitter.com/pedroeloyrdz" class="social-icons" target="_blank"><i class="fab fa-twitter fa-3x"></i></a>
+                </div>
+                <div class="col-2 col-lg-1 offset-sm-0">
+                    <a href="https://www.instagram.com/pedroeloyrdz/" class="social-icons" target="_blank"><i class="fab fa-instagram fa-3x"></i></a>
+                </div>
+                <div class="col-2 col-lg-1 offset-sm-0">
+                    <a href="https://www.youtube.com/channel/UCVbxYBAx68vf0l6JnKDVndw" class="social-icons" target="_blank"><i class="fab fa-youtube fa-3x"></i></a>
+                </div>
+                <div class="col-2 col-lg-1 offset-sm-0 ml-3 mr-3 mr-sm-4 mr-md-n4 mr-lg-0">
+                    <a href="https://vm.tiktok.com/Tbx5SF/" class="social-icons" id="tiktok" target="_blank">
+                        <svg id="tiktok-icon" height="384pt" viewBox="0 0 384 384" width="384pt" xmlns="http://www.w3.org/2000/svg"><path d="m240 80v-16h-32v176c0 26.472656-21.527344 48-48 48s-48-21.527344-48-48 21.527344-48 48-48h16v-32h-16c-44.113281 0-80 35.886719-80 80s35.886719 80 80 80 80-35.886719 80-80v-96.152344c13.390625 10.089844 29.976562 16.152344 48 16.152344h16v-32h-16c-26.472656 0-48-21.527344-48-48zm0 0" /><path d="m0 384h384v-384h-384zm32-352h320v320h-320zm0 0" /></svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                <div class="row justify-content-end">
+                    <div class="col-9 col-sm-8 col-md-5 col-lg-4">
+                        <img src="~/img/Pedro Eloy Rdz BlancoResized.png" id="footer-signature" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        @*<div class="container">
+                <div class="small footer-text text-center">Copyright &copy; 2020</div>
+            </div>*@
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="~/js/jquery-easing/jquery.easing.min.js"></script>
+    <script src="~/js/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="~/js/creative.min.js"></script>
+
+    <!--slider-->
+    <script type="text/javascript" src="~/js/slider.js"></script>
+
+    <!--Linkedin Script-->
+    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+
+    <!--Font Awesome Icons-->
+    <script src="https://kit.fontawesome.com/01cfeae2ba.js" crossorigin="anonymous"></script>
+    <script>
+        const checkbox = document.querySelector('.my-form input[type="checkbox"]');
+        const btns = document.querySelectorAll(".my-form button");
+
+        checkbox.addEventListener("change", function () {
+            const checked = this.checked;
+            for (const btn of btns) {
+                checked ? (btn.disabled = false) : (btn.disabled = true);
+            }
+        });
+    </script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

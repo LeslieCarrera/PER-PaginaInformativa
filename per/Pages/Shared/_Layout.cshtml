@@ -1,0 +1,269 @@
+﻿@model per.Pages.BaseModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '332233594728253');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+             src="https://www.facebook.com/tr?id=332233594728253&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169253094-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-169253094-1');
+    </script>
+
+    <meta name="description" content="Pedro Eloy Rodríguez, Ingeniero en Sistemas, Fundador de grupo Percepciones, con más de 16 años de experiencia en Servicio al Cliente y ventas, ofreciendo servicios de Consultoría, Conferencias, Capacitación y Coaching.
+          Cursos de Servicio al Cliente en Monterrey, Cursos de Servicio al Cliente en Monterrey Nuevo Leon, Cursos de Servicio al Cliente en Mexico, Cursos de Ventas en Monterrey, Cursos de Ventas en Monterrey Nuevo Leon, Cursos de Ventas en Mexico, Cursos de Neuroventas en Monterrey,
+          Cursos de Neuroventas en Monterrey Nuevo Leon, Cursos de Neuroventas en Mexico, Cursos de Cierre de ventas en Monterrey, Cursos de Cierre de ventas en Monterrey Nuevo Leon, Cursos de cierre de ventas en Mexico, Cursos de Productividad en Monterrey, Cursos de Productividad en Monterrey Nuevo Leon,
+          Cursos de Productividad en Mexico, Cursos de Administración del Tiempo en Monterrey, Cursos de Administración del Tiempo en Monterrey Nuevo Leon, Cursos de Administración del Tiempo en Mexico, Conferencia Motivacional en Monterrey, Conferencia Motivacional en Monterrey Nuevo Leon, Conferencia Motivacional en México,
+          Conferencia de Ventas en Monterrey, Conferencia de Ventas en Monterrey Nuevo Leon, Conferencia de Ventas en Mexico, Conferencistas motivacionales Reconocidos en México, Speaker motivacional en Mexico, Los mejores conferencistas de México, Los mejores conferencistas del Norte de México, Coach ejecutivo en Monterrey,
+          Coach ejecutivo en Monterrey Nuevo Leon, Coach de vida en Monterrey, Coach de vida en Monterrey Nuevo Leon, Webinars de ventas exitosos, El mejor curso de ventas en Mexico, El mejor webinar de ventas en Mexico, Programas de Capacitación efectivos en México, Programas de Capacitación efectivos en Monterrey,
+          Programas de Capacitación efectivos en Monterrey Nuevo Leon, Programa de entrenamiento para empresas en ventas, Programa de entrenamiento para empresas en experiencia del cliente, Buenos Programas de Capacitación de ventas en México, Buenos Programas de Capacitación de ventas en Monterrey,
+          Buenos Programas de Capacitación de ventas en Monterrey Nuevo Leon, Consultor reconocido en Experiencia al Cliente, El mejor consultor de ventas en México, El mejor consultor en cultura de servicio en Mexico, El mejor consultor de ventas en Monterrey, El mejor consultor de ventas en Monterrey Nuevo Leon,
+          El mejor consultor de ventas en Mexico, Programas de capacitación efectivos en ventas, Instructor en cierre de ventas, Conferencista experto en ventas, Conferencia de Servicio al Cliente en Mexico, Conferencia de Ventas en Mexico, Conferencia de Innovación en Mexico, Conferencia Motivacional en Mexico,
+          Programa de capacitación en ventas recomendado en México, Programa de capacitación en experiencia al cliente en México, Buenos Speakers en México, Conferencista recomendado para evento, Conferencista recomendado para evento en Mexico, Charlas motivacionales para empresas, Pláticas motivacionales para empresas en México,
+          Experto en Ventas en Monterrey, Experto en Servicio al Cliente en Monterrey, Experto en Ventas en Mexico, Experto en Servicio al Cliente en Mexico, Experto en Linkedin en México, Influencer Motivacional en México, Influencer en Ventas en México, Influencer en Servicio al Cliente en México, Influencer en Linkedin para México,
+          Influencer Motivacional en Linkedin, Influencer maduro en tiktok, Influencer mexicano en tiktok, Pedro Eloy Rodriguez Experto en Ventas Monterrey, Pedro Eloy Rodriguez Experto en Servicios al cliente Monterrey, Pedro Eloy Rodriguez Experto en Servicios al cliente Monterrey Nuevo Leon, Pedro Eloy Rodriguez Experto en Ventas Mexico,
+          Pedro Eloy Rodriguez Experto en Servicios al cliente Mexico, Experto en Ventas en Monterrey Nuevo Leon, Experto en Servicio al Cliente en Monterrey Nuevo Leon" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Cursos, Servicio al Cliente, Monterrey, Nuevo Leon, Ventas, México, Neuroventas, Cierre de ventas, Productividad, Administración del Tiempo, Conferencia Motivacional, Conferencia de Ventas,
+Conferencista, Motivacional, Speaker Motivacional, Coach Ejecutivo, Coach de vida, Webinars de ventas, Programas de Capacitación efectivos, Programa de entrenamiento para empresas, experiencia del cliente,
+Consultor reconocido, Consultor, Consultor de ventas,Programas de capacitación efectivos en ventas, consultor en cultura de servicio, instructor en cierre de ventas, Charlas motivacionales,Pláticas motivacionales,
+Motivacional, Experto en Ventas, Experto en Servicio al cliente, Experto en Linkedin, Influencer Motivacional, Influencer en Ventas, Influencer, Influencer maduro en tiktok, Influencer mexicano en tiktok, Pedro Eloy Rodriguez,
+Pedro, Eloy, Rodriguez, Rodríguez">
+    <title>@ViewData["Title"] Pedro Eloy Rodríguez</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/customLayout.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="~/img/favicon.ico" />
+    <!-- Theme CSS - Includes Bootstrap -->
+    <link href="~/css/creative.css" rel="stylesheet">
+
+
+
+</head>
+<body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v7.0"></script>
+    <header>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+            <div class="container">
+                <a href="/Index">
+                    <img src="~/img/LogoPER.png" class="logo-responsive mr-3" />
+                </a>
+                <a class="navbar-brand js-scroll-trigger" href="/Index">Inicio</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="/PedroEloy">Pedro Eloy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="/Index#Servicios">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="/Clientes">Clientes</a>
+                        </li>
+                        @*<li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="/Implementacion">Implementacion</a>
+        </li>*@
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="/contacto">Contacto</a>
+                        </li>
+                        @*  <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="/blog">Blog</a>
+        </li>*@
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    @RenderBody()
+
+    <!-- Footer -->
+    <footer class="bg-light pt-5 pb-0" id="footer">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-8 col-md-4 col-lg-3 mb-4">
+                    <div class="LI-profile-badge text-center" data-version="v1" data-size="medium" data-locale="es_ES" data-type="vertical" data-theme="dark" data-vanity="pedroeloyrdz"><a class="LI-simple-link" href='https://mx.linkedin.com/in/pedroeloyrdz?trk=profile-badge' style="color:white">Pedro Eloy Rodríguez ⭐</a></div>
+                </div>
+
+                <div class="col-12 col-sm-8 col-md-4 col-lg-3 offset-md-1">
+                    <div class="card border border-white mb-4 pr-3 pb-3 pl-3" id="footer-form">
+                        <form method="post">
+                            <div>
+
+                                @Html.EditorFor(s => s.Contact.Name, new { htmlAttributes = new { @class = "Snap form-control" } })
+                            </div>
+
+                            <div>
+                                @Html.EditorFor(s => s.Contact.Email, new { htmlAttributes = new { @class = "Snap form-control" } })
+                            </div>
+
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            <div asp-validation-summary="All"></div>
+                            <div class="form-group">
+                                <label for="nameFormInput">Nombre</label>
+                                <input type="text" asp-for="Contact.Eman" class="form-control" id="nameForm">
+                                <span asp-validation-for="Contact.Eman"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="emailFormInput">Correo electrónico</label>
+                                @Html.EditorFor(s => s.Contact.Liame, new { htmlAttributes = new { @class = "form-control" } })
+                                <!--<input type="email" asp-for="Contact.Email" class="form-control" id="emailFormInput">-->
+                                @Html.ValidationMessageFor(model => model.Contact.Liame, "", new { @class = "text-danger" })
+                                <!--<span asp-validation-for="Contact.Email"></span> -->
+                            </div>
+                            <div class="form-group">
+                                <label for="FormControlTextarea1">Mensaje</label>
+                                <textarea class="form-control" asp-for="Contact.Message" id="FormControlTextarea1" rows="4"></textarea>
+
+                                <span asp-validation-for="Contact.Message"></span>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-10">
+                                    <button type="submit" class="btn btn-dark">Enviar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-2 col-lg-1 offset-sm-1 offset-md-1 offset-lg-0 offset-xl-1">
+                    <a href="https://www.facebook.com/pedroeloyconsultor/" class="social-icons" target="_blank"><i class="fab fa-facebook-f fa-3x"></i></a>
+                </div>
+                <div class="col-2 col-lg-1 offset-sm-0">
+                    <a href="https://twitter.com/pedroeloyrdz" class="social-icons" target="_blank"><i class="fab fa-twitter fa-3x"></i></a>
+                </div>
+                <div class="col-2 col-lg-1 offset-sm-0">
+                    <a href="https://www.instagram.com/pedroeloyrdz/" class="social-icons" target="_blank"><i class="fab fa-instagram fa-3x"></i></a>
+                </div>
+                <div class="col-2 col-lg-1 offset-sm-0">
+                    <a href="https://www.youtube.com/channel/UCVbxYBAx68vf0l6JnKDVndw" class="social-icons" target="_blank"><i class="fab fa-youtube fa-3x"></i></a>
+                </div>
+                <div class="col-2 col-lg-1 offset-sm-0 ml-3 mr-3 mr-sm-4 mr-md-n4 mr-lg-0">
+                    <a href="https://vm.tiktok.com/Tbx5SF/" class="social-icons" id="tiktok" target="_blank">
+                        <svg id="tiktok-icon" height="384pt" viewBox="0 0 384 384" width="384pt" xmlns="http://www.w3.org/2000/svg"><path d="m240 80v-16h-32v176c0 26.472656-21.527344 48-48 48s-48-21.527344-48-48 21.527344-48 48-48h16v-32h-16c-44.113281 0-80 35.886719-80 80s35.886719 80 80 80 80-35.886719 80-80v-96.152344c13.390625 10.089844 29.976562 16.152344 48 16.152344h16v-32h-16c-26.472656 0-48-21.527344-48-48zm0 0" /><path d="m0 384h384v-384h-384zm32-352h320v320h-320zm0 0" /></svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                <div class="row justify-content-end">
+                    <div class="col-9 col-sm-8 col-md-5 col-lg-4">
+                        <img src="~/img/Pedro Eloy Rdz BlancoResized.png" id="footer-signature" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="~/js/jquery-easing/jquery.easing.min.js"></script>
+    <script src="~/js/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="~/js/creative.min.js"></script>
+
+    <!--slider-->
+    <script type="text/javascript" src="~/js/slider.js"></script>
+
+    <!--Linkedin Script-->
+    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+
+    <!--Font Awesome Icons-->
+    <script src="https://kit.fontawesome.com/01cfeae2ba.js" crossorigin="anonymous"></script>
+
+    <!--Honeypot Script-->
+    <script type="text/javascript">
+        function evitarSpam() {
+            // Si el campo está vacío, envía el formulario.
+            if (!document.getElementById("controlspam").value) {
+                return true;
+            }
+            // Si el campo tiene algún valor, es un spam bot
+            else {
+                return false;
+            }
+        }
+    </script>
+
+    <!-- Twitter Script-->
+
+    <script>
+        window.twttr = (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0],
+                t = window.twttr || {};
+            if (d.getElementById(id)) return t;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
+
+            t._e = [];
+            t.ready = function (f) {
+                t._e.push(f);
+            };
+
+            return t;
+        }(document, "script", "twitter-wjs"));</script>
+
+    <!--Pagination Script-->
+
+    <script>
+        $('#pager').pagination({
+            dataSource: [1, 2, 3, 4, 5, 6, 7, ... , 35],
+            pageSize: 4,
+            autoHidePrevious: true,
+            autoHideNext: true,
+            callback: function (data, pagination) {
+                // template method of yourself
+                var html = template(data);
+                dataContainer.html(html);
+            }
+        })
+    </script>
+
+
+    <!--Linkedin Script-->
+
+    <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,124 @@
+﻿@page "/blog/{slug}"
+@inject OrchardCore.IOrchardHelper Orchard
+
+@model BlogPostModel
+
+@using System.Globalization
+
+@{
+    var blogPostObj = await Model.GetPostObj();
+
+    var blogPost = blogPostObj.Content.BlogPost;
+
+    var markdownBody = await Model.GetMarkdown();
+
+    var singlePostVideo = blogPost.Video.EmbeddedAddress;
+
+    var postDateTime = blogPost.PostDate.Value;
+
+    string singleDate = postDateTime.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture);
+
+    var markdown = blogPostObj.Content.MarkdownBodyPart.Markdown;
+
+    var imagePaths = blogPost.Media.Paths;
+    int count = imagePaths.Count;
+}
+
+<section class="page-section bg-primary">
+    <div class="container white-text">
+        <div class="card card-background p-3 mb-5">
+
+            <h2 class="text-center mb-5">@blogPostObj.DisplayText</h2>
+
+            @if (count > 0)
+            {
+                string imagePath = blogPost.Media.Paths[0];
+
+                <div class="row justify-content-center mb-5">
+                    <div class="col-12 col-lg-10">
+                        <img src="@Orchard.AssetUrl(imagePath)" class="mh-100 mw-100" />
+                    </div>
+                </div>
+            }
+
+            @if (singlePostVideo != null)
+            {
+                <div class="row justify-content-center mb-5">
+                    <div class="col-12 col-md-10">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe scrolling="no" type="text/html" src="@(blogPost.Video.EmbeddedAddress)?rel=0&cc_load_policy=1&iv_load_policy=3&fs=0" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            @if (markdown != null)
+            {
+                <div id="blog-content" class="text-justify mb-5">
+                    @markdownBody
+                </div>
+            }
+
+            <!-- Social Sharing -->
+
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="text-center col-4 col-sm-3 col-md-2 col-lg-2 pr-lg-0 pl-lg-0 mb-2 ml-lg-n5">
+                        <div class="fb-share-button" data-href="http://pedroeloyrdz.com/blog/@blogPostObj.Content.AliasPart.Alias" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div>
+                    </div>
+                    <div class="text-center col-4 col-sm-3 col-md-2 col-lg-1 top-padding pt-md-1 pl-lg-0 pr-lg-2 pr-xl-5 pr-0 mb-2">
+                        <a class="twitter-share-button"
+                           href="http://pedroeloyrdz.com/blog/@blogPostObj.Content.AliasPart.Alias">
+                            Tweet
+                        </a>
+                    </div>
+                    <div class="text-center col-4 col-sm-3 col-md-2 col-lg-1 mb-2">
+                        <script type="IN/Share" data-url="http://pedroeloyrdz.com/blog/@blogPostObj.Content.AliasPart.Alias">
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="page-section bg-white py-5">
+    <div class="container justify-content-center">
+        <div class="row">
+            <div class="col-6 col-sm-3 col-lg-2 align-items-start align-items-md-center mb-2">
+                <img id="profile-picture" class="mh-100 mw-100 rounded-circle my-auto" src="~/img/profilePic.PNG" />
+            </div>
+            <div class="col-11 col-sm-8">
+                <div class="row">
+                    <div id="date" class="container w-100 ml-2">
+                        <p class="date-text d-inline">Post por Pedro Eloy Rodríguez</p>
+                        @if (postDateTime != null)
+                            {
+                                <i class="fas fa-calendar-alt d-inline date-text ml-2"></i>
+                                <p class="date-text d-inline">@singleDate</p>
+                            }
+                    </div>
+                </div>
+                <div class="row">
+                    <h1 class="w-100" id="about-him">Acerca de Pedro Eloy</h1>
+                </div>
+                <div class="row">
+                    <p id="about-text" class="w-100 text-justify mx-1">
+                        Pedro es fundador de Grupo Percepciones, speaker internacional y consultor de empresas en temas de: Experiencia del Cliente, Metodología de Ventas y Productividad Personal. Ha sido nombrado Líder Inspirador del Siglo XXI por la Global Quality Foundation y recibió el reconocimiento a la Excelencia Profesional por a UANL. Ha participado en la reconocida plataforma de TEDx y es actualmente colaborador de Imagen Televisión, y uno de los conferencistas de mayor impacto en México.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@Orchard.ConsoleLog(blogPostObj)
+
+@functions
+{
+    [FromRoute]
+    public string Slug { get; set; }
+
+}
+
+

@@ -1,0 +1,226 @@
+﻿
+#footer {
+    background-color: #2b2e31 !important;
+    position: absolute;
+    width: 100%;
+}
+
+.footer-text {
+    color: white;
+}
+
+.fa-facebook {
+    color: white;
+}
+
+.social-icons {
+    color: white;
+}
+
+.icon-size {
+    background-color: red;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 10px;
+   
+}
+
+footer a:hover {
+    color: #325D88;
+}
+
+.card-background {
+    background-color: black !important;
+}
+
+.link-text {
+    color: white !important;
+    font-weight: 600 !important;
+}
+
+.links a:hover {
+    color: #325D88 !important;
+}
+
+.fixed-width {
+    min-width: 80% !important;
+}
+
+#contact {
+    background-color: black;
+    color: white;
+}
+
+/*section .text-muted {
+    color: white !important;
+}*/
+
+.white-divider {
+    border-color: white !important;
+}
+
+.white-text {
+    color: white !important;
+}
+
+#footer-form {
+    background-color: #2b2e31 !important;
+    color: white;
+    padding-top: 1.35rem;
+}
+
+footer .border {
+    border-color: #A8ACB0 !important;
+}
+
+.form-control {
+    color: black !important;
+    font-weight: 700 !important;
+}
+
+#tiktok-icon {
+    max-height: 3rem;
+    max-width: 3rem;
+    fill: white;
+}
+
+#tiktok svg:hover {
+    fill: #325d88;
+}
+
+#footer-signature {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+
+.col-md-3 #tiktok {
+    margin-left: 1rem;
+}
+
+#title {
+    color: white !important;
+}
+
+/*a:hover {
+    color: #325d88 !important;
+}*/
+
+#blog-content p a {
+    color: white;
+}
+
+#blog-content img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /*max-height: 50%;
+    max-width: 50%;*/
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.top-padding {
+    padding-top: .1rem;
+}
+
+.date-text {
+    color: #6c757d !important;
+    font-size: .8rem !important;
+}
+
+#about {
+    color: black;
+}
+
+#profile-picture {
+    max-height: 10%;
+    max-width: 10%;
+}
+
+#about-him {
+    color: #325d88 !important;
+    text-align: start !important;
+    margin-left: 1rem;
+}
+
+#about-text {
+    color: black;
+    font-weight: 700;
+}
+
+#contact-text {
+    color: white !important;
+}
+
+
+@media only screen and (max-width: 576px) {
+    #about-him {
+        text-align: center !important;
+    }
+
+    #date {
+        text-align: center !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #blog-content img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+    #blog-content img {
+        max-width: 80%;
+        height: auto;
+    }
+}
+
+@media only screen and (min-width: 993px) {
+    #blog-content img {
+        max-width: 60%;
+        height: auto;
+    }
+}
+
+.post-containter {
+    background-color: white;
+    color: black !important;
+}
+
+.max-char {
+    width: 50ch;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.btnServicios {
+    color: white;
+    padding: 0.8rem;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-weight: 400;
+    display: block;
+    width: 80%;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: black;
+}
+
+.btnServicios:hover {
+        color: black;
+        background-color: lightgray;
+}
+
+#social-sharing a:hover {
+    color: #325d88 !important;
+}
+
+#mainNav a:hover {
+    color: #325d88 !important;
+}

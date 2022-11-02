@@ -1,0 +1,181 @@
+﻿@page
+@model per.Pages.OrderPageModel
+@{
+    ViewData["Title"] = "OrderPage";
+    Layout = "~/Pages/Shared/_LayoutOrderPage.cshtml";
+}
+
+    <section class="page-section" id="Order">
+        <form class="my-form" method="post">
+            <div class="container">
+                <h1>Contáctanos!</h1>
+                <ul>
+                    <li>
+
+                        @Html.EditorFor(s => s.Contact.Name, new { htmlAttributes = new { @class = "Snap form-control" } })
+                    </li>
+
+                    <li>
+                        @Html.EditorFor(s => s.Contact.Email, new { htmlAttributes = new { @class = "Snap form-control" } })
+                    </li>
+                    <li>
+                        <div class="grid grid-2">
+                            <input type="text" asp-for="Contact.Eman" placeholder="Nombre" required>
+                            <input type="text" asp-for="Contact.EmanTasl" placeholder="Apellido" required>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="grid grid-2">
+                            <input type="email" asp-for="Contact.Liame" placeholder="Email" required>
+                            <input type="tel" asp-for="Contact.Numero" placeholder="Número de móvil" required>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="grid grid-2">
+                            <input type="text" asp-for="Contact.Link" placeholder="Linkedin" required>
+                            <select required>
+                                <option selected disabled>-- Tamaño de tu equipo comercial --</option>
+                                <option>Menos de 10 vendedores</option>
+                                <option>Entre 11 y 25 vendedores</option>
+                                <option>Entre 26 y 50 vendedores</option>
+                                <option>Entre 51 y 100 vendedores</option>
+                                <option>Más de 101 vendedores</option>
+                            </select>
+
+
+                        </div>
+                    </li>
+                    <li>
+                        <p>Solicite una fecha para agendar una cita:</p>
+                        <div class="grid grid-2">
+                            <input type="date" asp-for="Contact.Fecha" required />
+                            <input type="time" asp-for="Contact.Hora" required />
+                        </div>
+                        
+                    </li>
+                    <li>
+                        <textarea asp-for="Contact.Meta" placeholder="¿Cuál es tu meta de ventas para el 2020?" required></textarea>
+                    </li>
+                    <li>
+                        <textarea asp-for="Contact.Reto" placeholder="¿Cuál es el mayor reto al que se enfrenta tu equipo en éstos momentos?" required></textarea>
+                    </li>
+                    <li>
+                        <div class="grid grid-3">
+                            <div class="required-msg">CAMPOS REQUERIDOS</div>
+                            <button class="btn-grid" type="submit">
+                                <span class="back">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/email-icon.svg" alt="">
+                                </span>
+                                <span class="front">ENVIAR</span>
+                            </button>
+                            <button class="btn-grid" type="reset">
+                                <span class="back">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/eraser-icon.svg" alt="">
+                                </span>
+                                <span class="front">RESETEAR</span>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </form>
+     <!--   <footer>
+            <div class="container">
+                <small>
+                    Made with <span>❤</span> by <a href="http://georgemartsoukos.com/" target="_blank">George Martsoukos</a>
+                </small>
+            </div>
+        </footer>
+         -->
+    </section>
+
+
+
+
+
+
+<!--
+<section class="page-section" id="contact">
+
+
+
+    <div class="container">
+        <div class=""></div>
+        <div class="">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="mt-0">Contacto</h2>
+                    <hr class="divider white-divider my-4">
+                    <h5 class="text-muted mb-5" id="contact-text">Ponte en contacto con Pedro Eloy para obtener más información acerca de los servicios que ofrece.</h5>
+
+                </div>
+            </div>
+            <form class="form" method="post">
+                <div asp-validation-summary="All"></div>
+                <div class="card card-background p-3 mb-5">
+                    <div>
+
+                        @Html.EditorFor(s => s.Contact.Name, new { htmlAttributes = new { @class = "Snap form-control" } })
+                    </div>
+
+                    <div>
+                        @Html.EditorFor(s => s.Contact.Email, new { htmlAttributes = new { @class = "Snap form-control" } })
+                    </div>
+                    <div class="form-group">
+                        <label for="nameFormInput" asp-for="Contact.Eman">Nombre</label>
+                        <input type="text" class="form-control" asp-for="Contact.Eman" id="nameForm">
+                        <span asp-validation-for="Contact.Eman"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="emailFormInput" asp-for="Contact.Liame">Correo electrónico</label>
+                        <input type="email" class="form-control" asp-for="Contact.Liame" id="emailFormInput">
+                        <span asp-validation-for="Contact.Liame"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="selectItems" asp-for="Contact.Service">Servicio de tu interés</label>
+                        <select class="form-control" asp-for="Contact.Service" id="selectItems">
+                            <option selected>Seleccione un servicio</option>
+                            <option>Consultoría</option>
+                            <option>Conferencias</option>
+                            <option>Capacitación</option>
+                            <option>Coaching</option>
+                            <option>Otro</option>
+                        </select>
+                        <span asp-validation-for="Contact.Service"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="FormControlTextarea1" asp-for="Contact.Message">Mensaje</label>
+                        <textarea class="form-control" asp-for="Contact.Message" id="FormControlTextarea1" rows="3"></textarea>
+                        <span asp-validation-for="Contact.Message"></span>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col">
+                            <button type="submit" class="btn btn-dark">Enviar</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p>* Todos los campos son obligatorios</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="container" id="social-sharing">
+        <div class="row justify-content-md-center">
+            <div class="col-sm-3 col-12 text-center mb-3">
+                <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
+                <a class="d-block link-text" href="tel:8183942624">(81) 83 94 26 24</a>
+            </div>
+            <div class="col-sm-3 col-12 text-center mb-3">
+                <i class="fab fa-whatsapp fa-3x mb-3 text-muted"></i>
+                <a class="d-block link-text" href="https://api.whatsapp.com/send?phone=528111395292" target="_blank">811 139 5292</a>
+            </div>
+            <div class="col-sm-3 col-12 text-center mb-3">
+                <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
+                <a class="d-block link-text" href="mailto:pedro@percepciones.com.mx">pedro@percepciones.com.mx</a>
+            </div>
+        </div>
+    </div>
+
+</section>
+    -->

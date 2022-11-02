@@ -1,0 +1,150 @@
+﻿@page "/blog"
+@inject OrchardCore.IOrchardHelper Orchard
+
+@model BlogModel
+
+@using System.Globalization
+
+@{
+    var blogPosts = await Model.GetPaginatedResult(Model.CurrentPage);
+    var postsCount = await Model.GetCount();
+
+    var totalPages = (int)Math.Ceiling(decimal.Divide(postsCount, Model.PageSize));
+
+    var totalPosts = await Model.GetBlogPosts();
+
+}
+
+<section class="page-section bg-primary" id="blog-content">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h1 class="mt-0" id="title">Blog</h1>
+                <hr class="divider white-divider my-4">
+            </div>
+        </div>
+        <div class="text-center">
+            <h2 class="white-text">Aún no hay contenido disponible.</h2>
+        </div>
+
+       @* @if (postsCount == 0)
+        {
+            <div class="text-center">
+                <h2 class="white-text">Aún no hay contenido disponible.</h2>
+            </div>
+        }
+        <div class="row" id="posts-container">
+            @{
+                int i = 0;
+                string className = "";
+            }
+
+
+            @foreach (var post in blogPosts)
+            {
+                i = i + 1;
+                var imagePaths = post.ContentItem.Content.BlogPost.Media.Paths;
+                int count = imagePaths.Count;
+
+                var markdown = post.Content.MarkdownBodyPart.Markdown;
+
+                var postDateTime = post.ContentItem.Content.BlogPost.PostDate.Value;
+                string singleDate = postDateTime.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture);
+
+                dynamic singlePostVideo = post.ContentItem.Content.BlogPost.Video.EmbeddedAddress;
+
+                if (i % 2 == 0)
+                {
+                    className = "offset-md-1";
+                }
+                else
+                {
+                    className = "";
+                }
+
+
+                <div class="col-12 col-md-5 mt-2 post-container content @className">
+                    <div>
+                        @if (count > 0)
+                        {
+                            string imagePath = imagePaths[0];
+
+                            <div class="row mb-2">
+                                <img src="@Orchard.AssetUrl(imagePath)" class="mh-100 mw-100 mt-0 mb-0" />
+                            </div>
+                        }
+                        else if (count == 0)
+                        {
+                            if (singlePostVideo != null)
+                            {
+                                <div class="row mb-2">
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe src="@(post.ContentItem.Content.BlogPost.Video.EmbeddedAddress)?rel=0&cc_load_policy=1&iv_load_policy=3&fs=0" frameborder="0"></iframe>
+                                    </div>
+                                </div>
+                            }
+                        }
+                        <div class="row text-center">
+                            <h1>@post.DisplayText</h1>
+                        </div>
+
+                        @if (markdown != null)
+                        {
+                            string textContent = Convert.ToString(markdown);
+
+                            <div class="row">
+                                <div class="row text-justify mx-3 markdown-text">
+                                    @Model.TruncateForDisplay(textContent, 290)
+                                </div>
+                            </div>
+
+                        }
+                    </div>
+                    <div>
+                        <div class="row text-center">
+                            <div class="row my-4">
+                                <div id="date" class="container">
+                                    <p class="date-text d-inline">Post por Pedro Eloy Rodríguez</p>
+                                    @if (postDateTime != null)
+                                    {
+                                        <i class="fas fa-calendar-alt d-inline date-text ml-2"></i>
+                                        <p class="date-text d-inline">@singleDate</p>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+
+                        @if (markdown != null)
+                        {
+                            string textContent = Convert.ToString(markdown);
+                            @if (textContent.Length > 290)
+                            {
+                                <div class="row mb-3">
+                                    <button class="btnServicios card_btn" onclick="location.href='blog/@post.ContentItem.Content.AliasPart.Alias'">Leer Post</button>
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+
+        <div class="mt-5">
+            <ul class="pagination justify-content-center" id="pager">
+                @for (var j = 1; j <= totalPages; j++)
+                {
+                    <li class="page-item @(j == Model.CurrentPage ? "active" : "") active-btn">
+                        <a asp-route-currentpage="@j" class="page-link">@j</a>
+                    </li>
+                }
+            </ul>
+        </div>*@
+
+    </div>
+</section>
+
+@Orchard.ConsoleLog(blogPosts)
+
+
+
+

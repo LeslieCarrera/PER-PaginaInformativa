@@ -1,0 +1,67 @@
+﻿@page
+@model per.Pages.ServiciosModel
+@{
+    ViewData["Title"] = "Servicios";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Servicios</title>
+    <link href="~/css/BlogCard.css" rel="stylesheet">
+</head>
+<body>
+    <section class="servicio-section bg-primary" id="Servicios">
+        <div class="main">
+            <h1 class="Titulo">Servicios</h1>
+            <hr class="divider white-divider my-4">
+            <ul class="cards">
+                <li class="cards_item">
+                    <div class="card">
+                        <div class="card_image"><img class="image_servicio" src="~/img/ConsultoriaMod.jpg"></div>
+                        <div class="card_content">
+                            <h2 class="card_title">CONSULTORÍA</h2>
+                            <p class="card_text">Revisamos tu proceso actual de ventas, el del servicio y experiencia que viven tus clientes, la publicidad y manera de posicionar tu marca y el sentir de tus colaboradores sobre el liderazgo de negocio. Después de esto solo es necesario cambiar lo que nos traerá mejores resultados.</p>
+                            <button class="btnServicios card_btn" onclick="location.href='Consultoria'">Saber Más</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="cards_item">
+                    <div class="card">
+                        <div class="card_image"><img class="image_servicio" src="~/img/ConferenciasMod.jpg"></div>
+                        <div class="card_content">
+                            <h2 class="card_title">CONFERENCIAS</h2>
+                            <p class="card_text">Preparo conferencias sobre temas que me apasionan y me aseguro de que la información llegue a todos los que las escuchan tocando la lógica y la creatividad, logrando unir la mente y el corazón para que la gente no solo se motive, si no que tenga nuevas herramientas por implementar.</p>
+                            <button class="btnServicios card_btn" onclick="location.href='Conferencias'">Saber Más</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="cards">
+                <li class="cards_item">
+                    <div class="card">
+                        <div class="card_image"><img class="image_servicio" src="~/img/ProgramasCapacitacionMod.jpg"></div>
+                        <div class="card_content">
+                            <h2 class="card_title">CAPACITACIÓN</h2>
+                            <p class="card_text">Desarrollo programas de entrenamiento en donde logro alinear las metas personales con las metas del negocio, cuando los colaboradores comprenden esto, entonces aprenden con facilidad la metodología de venta, a ser productivos, a atender mejor al cliente y cualquier otra cosa.</p>
+                            <button class="btnServicios card_btn" onclick="location.href='Capacitacion'">Saber Más</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="cards_item">
+                    <div class="card">
+                        <div class="card_image"><img class="image_servicio" src="~/img/CoachingEjecutivoMod.jpg"></div>
+                        <div class="card_content">
+                            <h2 class="card_title">COACHING</h2>
+                            <p class="card_text">Cualquier meta personal, profesional o de tu equipo de trabajo, se puede alinear, planear y estructurar para ejecutarla y ser lograda. Las respuestas están en ti, solo hay que hacer las preguntas correctas para encontrarlas y después acomodarlas para que te lleven a los resultados.</p>
+                            <button class="btnServicios card_btn" onclick="location.href='Coaching'">Saber Más</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        </section>
+</body>
+</html>

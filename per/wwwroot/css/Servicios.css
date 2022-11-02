@@ -1,0 +1,132 @@
+.contenedor1{
+  /*width: 80%;*/
+  height: 50px;
+  /*background: blue;*/
+  /*margin: 50px auto;*/
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contenedor2 {
+    /*width: 80%;*/
+    height: 500px;
+<<<<<<< HEAD
+    /*background: black;*/
+=======
+    /*background: blue;*/
+>>>>>>> 11db32f... Contact page added
+    /*margin: 50px auto;*/
+    margin-top: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+<<<<<<< HEAD
+    /*background-color: white;*/
+    border-radius: 0.25rem;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+
+=======
+>>>>>>> 11db32f... Contact page added
+}
+.contenedor3 {
+    /*width: 80%;*/
+    height: 500px;
+    /*background: blue;*/
+    /*margin: 50px auto;*/
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tituloServicio{
+  /*background: green;*/
+  /*width: 200px;*/
+  /*height: 100px;*/
+  margin: 30px;
+  padding: 20px;
+  text-align: center;
+
+}
+.imagenServicio{
+  /*background: green;*/
+  width: 640px;
+  height: 426px;
+  margin: 30px;
+  /*margin-left: 350px;*/
+  /*padding: 20px;*/
+  align-content: center;
+  box-shadow: rgba(0, 0, 0, 0.6) 5px 5px 5px 5px;
+
+}
+<<<<<<< HEAD
+.image-responsive {
+    width: 100%;
+    max-width: 640px;
+    min-width: 540px;
+    max-height:426px;
+    min-height:326px;
+    height: auto;
+    margin:30px;
+    box-shadow: rgba(0, 0, 0, 0.6) 5px 5px 5px 5px;
+}
+=======
+>>>>>>> 11db32f... Contact page added
+.descripcionServicio{
+  /*background: green;*/
+  /*width: 200px;
+  height: 100px;*/
+  margin-bottom: 30px;
+  padding: 20px;
+  text-align:center;
+
+}
+.leyendaServicio{
+    text-align:center;
+<<<<<<< HEAD
+}
+.Serviciobg{
+    background-color: gray;
+}
+
+.btnServicios2 {
+    color: white;
+    padding: 0.8rem;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-weight: 400;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: black;
+    margin-top:-30px;
+}
+
+.btnServicios2:hover {
+        color: black;
+        background-color: white;
+}
+
+.btnServicios {
+    color: white;
+    padding: 0.8rem;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-weight: 400;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: black;
+}
+.btnServicios:hover{
+    color:black;
+    background-color:white;
+=======
+>>>>>>> 11db32f... Contact page added
+}
